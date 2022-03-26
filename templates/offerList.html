@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for i, j in offerCategory.items %}
+       
+    <form method = "POST"> 
+            
+            {{j}}
+            <input value="{{j.offerID}}"" type="text" name="offerID" /> 
+                <input type="submit" value="Delete" />
+                <br/>
+                {%  csrf_token %}
+        </form>
+       
+       
+       
+            {% endfor %}
+</body>
+</html>

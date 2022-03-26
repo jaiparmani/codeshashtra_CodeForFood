@@ -11,10 +11,16 @@ class Users(models.Model):
     country = models.CharField(max_length=20)
     city = models.CharField(max_length=20)
 
+    def __unicode__(self):
+        return self.username
+
 
 class CardType(models.Model):
     bank = models.CharField(max_length=20)
     card_type = models.CharField(max_length=20)  # Debit or credit gold
+
+    def __str__(self):
+        return self.card_type + " " + self.bank
 
 
 class Card(models.Model):
@@ -25,9 +31,15 @@ class Card(models.Model):
     # card_expiry = models.CharField(max_length=20)
     # card_cvv = models.CharField(max_length=20)
 
+    def __str__(self):
+        return self.card_number
+
 
 class OfferCategory(models.Model):
     category = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.category
 
 
 class OfferDetails(models.Model):
@@ -36,15 +48,26 @@ class OfferDetails(models.Model):
     offerPercentage = models.IntegerField(null=True)
     offerValidUpto = models.DateField(null=True)
 
+    def __str__(self):
+        return self.offerPercentage
+
 
 class Offer(models.Model):
-    onCard = models.ForeignKey(Card, on_delete=models.CASCADE)
+    onCard = models.ForeignKey(CardType, on_delete=models.CASCADE)
     offerTitle = models.CharField(max_length=20)
-    offerSource = models.CharField(max_length=20)
-    offerDescription = models.CharField(max_length=20)
-    offerImage = models.CharField(max_length=20)
-    offerLink = models.CharField(max_length=100)
-    offerPrice = models.FloatField()
+    offerSource = models.CharField(max_length=20, blank=True)
+    offerID = models.IntegerField()
+    offerDescription = models.CharField(max_length=20, blank=True)
+    offerImage = models.CharField(max_length=20, null=True, blank=True)
+    offerLink = models.CharField(max_length=100, null=True, blank=True)
+    offerPrice = models.FloatField(null=True, blank=True)
     offerCategory = models.ForeignKey(OfferCategory, on_delete=models.CASCADE)
 
-    offerDetails = models.ForeignKey(OfferDetails, on_delete=models.CASCADE)
+    # offerDetails = models.ForeignKey(OfferDetails, on_delete=models.CASCADE)
+    minOrder = models.IntegerField(null=True, blank=True)
+    maxOrder = models.IntegerField(null=True, blank=True)
+    offerPercentage = models.IntegerField(null=True, blank=True)
+    offerValidUpto = models.DateField(null=True, blank=True)
+
+    def __str__(self):
+        return self.offerTitle

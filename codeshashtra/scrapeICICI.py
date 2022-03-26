@@ -32,6 +32,6 @@ def remove_tags(html):
     return ' '.join([x+"." for x in (soup.stripped_strings)])
 
 
-print(remove_tags(soup))
+print(remove_tags(r))
 # # a = soup.prettify()
 # # print(type(a))

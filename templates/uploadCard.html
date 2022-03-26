@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- HELLO   -->
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="text" name="cardNumber" placeholder="Card Number" value={{cardNumber}}>
+        <input type="text" name="" placeholder="Card Category" value={{cardCategory}}>
+
+        <input type="text" name="cardNumber" placeholder="Bank Name" value={{bankName}}>
+        <input type="submit" value="Upload">
+        {% csrf_token %}
+    </form>
+</body>
+</html>
