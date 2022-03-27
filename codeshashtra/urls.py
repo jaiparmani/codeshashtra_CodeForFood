@@ -21,9 +21,11 @@ from funs import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.index),
-    path("home/", views.homePage),
-    path("uploadCard/", views.uploadCard),
+    path("home/", views.homePage, name="home"),
+    path("uploadCard/", views.uploadCard, name="uploadCard"),
     path("login/", views.login),
-    path("offerList/", views.offerList),
+    path("offerList/", views.offerList, name="offerList"),
+    path("sendWhatsappAlert/", views.sendWhatsappAlert),
 ]
 urlpatterns += staticfiles_urlpatterns()
+    

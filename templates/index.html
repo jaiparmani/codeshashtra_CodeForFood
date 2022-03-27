@@ -1,3 +1,4 @@
+{% load static   %}
 <!DOCTYPE html>
 <html style="font-size: 16px;">
   <head>
@@ -219,7 +220,7 @@
 .u-section-2 .u-image-1 {
   width: 197px;
   height: 197px;
-  background-image: url("images/gffgfg1.jpg");
+  background-image: url("{% static 'images/gffgfg1.jpg' %}");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -258,7 +259,7 @@
 .u-section-2 .u-image-2 {
   width: 197px;
   height: 197px;
-  background-image: url("images/ds.jpg");
+  background-image: url("{% static 'images/gffgfg1.jpg' %}");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -297,7 +298,7 @@
 .u-section-2 .u-image-3 {
   width: 197px;
   height: 197px;
-  background-image: url("images/w.jpg");
+  background-image: url("{% static 'images/gffgfg1.jpg' %}");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -336,7 +337,7 @@
 .u-section-2 .u-image-4 {
   width: 197px;
   height: 197px;
-  background-image: url("images/fsr.jpg");
+  background-image: url("{% static 'images/gffgfg1.jpg' %}");
   background-position: 50% 50%;
   margin: 0 auto;
 }
@@ -39088,9 +39089,12 @@ a.u-link.u-text-hover-grey-90:hover {
 
     </style>
   </head>
-  <body class="u-body u-xl-mode"><header class="u-clearfix u-header u-header" id="sec-0a53"><div class="u-clearfix u-sheet u-sheet-1">
+  <body class="u-body u-xl-mode">
+    <!-- start -->
+    
+    <header class="u-clearfix u-header u-header" id="sec-0a53"><div class="u-clearfix u-sheet u-sheet-1">
     <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="500">
-      <img src="images/VirtualTijori.png" class="u-logo-image u-logo-image-1">
+      <img src="{% static 'images/VirtualTijori.png'%}" class="u-logo-image u-logo-image-1">
     </a>
     <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
       <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
@@ -39101,8 +39105,8 @@ a.u-link.u-text-hover-grey-90:hover {
         </a>
       </div>
       <div class="u-custom-menu u-nav-container">
-        <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Landing-Page.html" style="padding: 10px 44px;">Landing Page</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About.html" style="padding: 10px 44px;">About</a>
+        <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Landing-Page.html"  style="padding: 10px 44px; color:black !important">Landing Page</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About.html" style="padding: 10px 44px;color:black; z-index: 100 ;">About</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact.html" style="padding: 10px 44px;">Contact</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Login.html" style="padding: 10px 42px 10px 44px;">Login</a>
 </li></ul>
@@ -39112,7 +39116,7 @@ a.u-link.u-text-hover-grey-90:hover {
           <div class="u-inner-container-layout u-sidenav-overflow">
             <div class="u-menu-close"></div>
             <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Landing-Page.html">Landing Page</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.html">About</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="color:black; !important " href="About.html">About</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.html">Contact</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login.html">Login</a>
 </li></ul>
@@ -39123,11 +39127,11 @@ a.u-link.u-text-hover-grey-90:hover {
     </nav>
   </div></header>
     <section class="u-align-left u-clearfix u-white u-section-1" src="" id="sec-554b">
-      <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/Untitleddesign1.png" alt="" data-image-width="500" data-image-height="500">
+      <img class="u-image u-image-default u-preserve-proportions u-image-1" src="{% static 'images/Untitleddesign1.png' %}" alt="" data-image-width="500" data-image-height="500">
       <h1 class="u-text u-title u-text-1">Find savings difficult?</h1>
-      <img class="u-expanded-width u-image u-image-2" src="images/47811.jpg" data-image-width="8000" data-image-height="4000">
+      <img class="u-expanded-width u-image u-image-2" src="{% static 'images/47811.jpg' %}" data-image-width="8000" data-image-height="4000">
       <p class="u-large-text u-text u-text-variant u-text-2">Discover AMAZING OFFERS that full fill your needs and yet helps you to save a lot.</p>
-      <a href="#" class="u-border-none u-btn u-button-style u-custom-color-5 u-hover-custom-color-4 u-btn-1">View more</a>
+      <a href="{% url 'home'  %}" class="u-border-none u-btn u-button-style u-custom-color-5 u-hover-custom-color-4 u-btn-1">View more</a>
     </section>
     <section class="u-align-center u-clearfix u-palette-2-light-2 u-section-2" id="carousel_7803">
       <div class="u-clearfix u-sheet u-sheet-1">
@@ -39237,7 +39241,7 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
         <div class="u-expanded-width u-uploaded-video u-video u-video-1">
           <div class="embed-responsive">
             <video class="embed-responsive-item" data-autoplay="1" muted="" autoplay="autoplay" playsinline="">
-              <source src="files/WhatsAppVideo2022-03-26at4.02.31PM.mp4" type="video/mp4">
+              <source src="{% static 'videos/WhatsAppVideo2022-03-26at4.02.31PM.mp4'%}" type="video/mp4">
               <p>Your browser does not support HTML5 video.</p>
             </video>
           </div>
@@ -39265,7 +39269,7 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
               <div class="u-align-center-sm u-align-right-md u-container-style u-layout-cell u-size-20 u-size-20-md u-layout-cell-2">
                 <div class="u-container-layout u-valign-middle u-container-layout-2">
                   <a href="https://nicepage.com" class="u-image u-logo u-image-1">
-                    <img src="images/VirtualTijori.png" class="u-logo-image u-logo-image-1">
+                    <img src='{% static "images/VirtualTijori.png" %}'   class="u-logo-image u-logo-image-1">
                   </a>
                 </div>
               </div>
